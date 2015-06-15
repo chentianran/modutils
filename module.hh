@@ -66,6 +66,7 @@ protected:
         } else if (listing) {                               \
             for (auto f : factories)                        \
                 listing->push_back (f.first);               \
+	    return 0;                                       \
         } else {                                            \
             FMAP::iterator iter = factories.find (name);    \
             if (factories.end() == iter)                    \
