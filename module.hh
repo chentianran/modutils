@@ -39,8 +39,8 @@ protected:
 };
 
 #define MODULE_DCL                                          \
-    const char* name ()        const;                       \
-    const char* description () const;
+    const char* name ()        const override;              \
+    const char* description () const override;
 
 #define MODULE_DEF(CLASS,SUPER,NAME,DESC)                   \
     struct CLASS##Factory : public SUPER::Factory {         \
